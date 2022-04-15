@@ -1,15 +1,12 @@
 package com.yodo1.demo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.yodo1.advert.open.Yodo1Advert;
 import com.yodo1.android.sdk.open.Yodo1Game;
-import com.yodo1.android.sdk.kit.YLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,18 +30,15 @@ public class MainActivity extends Yodo1SupportActivity implements View.OnClickLi
         //main
         fragments.add(new FragmentMain());
         mainPagrIds.add(R.id.button_main);
-        //login
+        //uc
         fragments.add(new FragmentLogin());
         mainPagrIds.add(R.id.button_login);
-        //pay
+        //iap
         fragments.add(new FragmentPay());
         mainPagrIds.add(R.id.button_pay);
-        //advert
-        fragments.add(new FragmentAdvert());
-        mainPagrIds.add(R.id.button_advert);
-        //anti
-        fragments.add(new FragmentAnti());
-        mainPagrIds.add(R.id.button_anti);
+        //analytics
+        fragments.add(new FragmentAnalytics());
+        mainPagrIds.add(R.id.button_analytics);
         //other
         fragments.add(new FragmentOther());
         mainPagrIds.add(R.id.button_other);
@@ -58,21 +52,10 @@ public class MainActivity extends Yodo1SupportActivity implements View.OnClickLi
             button.setOnClickListener(this);
         }
 
-        //开启Log
+        //1,init SDK
         Yodo1Game.initSDK(this, Config.APP_KEY, Config.REGION_CODE);
-        Yodo1Advert.initSDK(this, Config.APP_KEY);
-
-        //测试环境
-//        Yodo1OPSBuilder.getInstance().setServerHost(0, "https://api-ucap-test.yodo1.com/uc_ap");
-//        Yodo1OPSBuilder.getInstance().setServerHost(1, "https://api-payment-test.yodo1.com/payment");
-//        Yodo1OPSBuilder.getInstance().setServerHost(6, "https://api-olconfig-test.yodo1.com");
-//        Yodo1OnlineConfig.getInstance().setBuildEnvironment("https://api-olconfig-test.yodo1.com/config/getDataV2");
-
-
-//预生产环境
-//        Yodo1OPSBuilder.getInstance().setServerHost(1, "https://payment-stg.yodo1api.com/payment");
-//        Yodo1OPSBuilder.getInstance().setServerHost(0, "https://uc-ap-stg.yodo1api.com/uc_ap");
-//        Yodo1OPSBuilder.getInstance().setServerHost(6, "https://anti-stg.yodo1api.com");
+        //2,setDebug if need.
+        Yodo1Game.setDebug(true);
     }
 
     @Override
@@ -80,17 +63,5 @@ public class MainActivity extends Yodo1SupportActivity implements View.OnClickLi
         int id = v.getId();
         int i = mainPagrIds.indexOf(id);
         vp.setCurrentItem(i, false);
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        YLog.e("requestCode:" + requestCode + " permssion:" + permissions);
     }
 }

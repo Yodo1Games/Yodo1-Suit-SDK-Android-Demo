@@ -7,21 +7,16 @@ import android.os.PersistableBundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.yodo1.android.sdk.kit.YLog;
-import com.yodo1.android.sdk.open.Yodo1Game;
 import com.yodo1.bridge.api.Yodo1BridgeUtils;
 
 /**
- * Created by houjingsheng on 2017/4/24.
+ * BaseActivity
  */
 public class Yodo1SupportActivity extends AppCompatActivity {
-
-    public final String TAG = "Yodo1Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        YLog.d(TAG, " onCreate ...Yodo1 Suit Version:" + Yodo1Game.getSDKVersion());
         Yodo1BridgeUtils.gamesdk().onActivityCreate(this);
         Yodo1BridgeUtils.onActivityCreated(this, savedInstanceState);
     }

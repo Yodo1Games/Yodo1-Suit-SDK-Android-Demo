@@ -74,6 +74,12 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/iap_verofu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="渠道内激活码兑换" />
+
+            <Button
                 android:id="@+id/btn_payment_restore_purchase"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

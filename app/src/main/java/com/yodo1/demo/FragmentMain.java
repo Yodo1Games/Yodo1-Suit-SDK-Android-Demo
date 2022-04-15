@@ -1,9 +1,7 @@
 package com.yodo1.demo;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.StringBuilderPrinter;
@@ -14,17 +12,13 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.yodo1.advert.AdapterAdvertBase;
-import com.yodo1.advert.factory.Yodo1AdvertAdapterFactory;
 import com.yodo1.android.dmp.AdapterAnalyzeBase;
 import com.yodo1.android.dmp.Yodo1AnalyticsAdapterFactory;
 import com.yodo1.android.sdk.Yodo1Builder;
-import com.yodo1.android.sdk.kit.YAppUtils;
-import com.yodo1.android.sdk.kit.YEncodeUtil;
 import com.yodo1.android.sdk.kit.YSdkUtils;
 import com.yodo1.android.sdk.open.Yodo1Game;
 import com.yodo1.android.sdk.open.Yodo1GameUtils;
-import com.yodo1.bridge.api.Yodo1UserCenter;
+import com.yodo1.android.sdk.open.Yodo1UserCenter;
 import com.yodo1.sdk.adapter.ChannelAdapterBase;
 import com.yodo1.sdk.adapter.ChannelAdapterFactory;
 
@@ -58,20 +52,6 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.info_content:
-                AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-                builder.setTitle("PackageInfo");
-                try {
-                    builder.setMessage(updateInfos());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-                builder.create().show();
                 break;
             default:
         }
@@ -105,11 +85,12 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
     private String updateInfos() {
         StringBuilder sb = new StringBuilder();
         StringBuilderPrinter ps = new StringBuilderPrinter(sb);
-        ps.println("app包名:               " + mContext.getPackageName());
-        ps.println("app版本:               " + Yodo1GameUtils.getVersionName());
+        ps.println("App包名:               " + mContext.getPackageName());
+        ps.println("App版本:               " + Yodo1GameUtils.getVersionName());
         ps.println("SDK版本:               " + Yodo1Game.getSDKVersion());
         ps.println("appKey:               " + Yodo1Builder.getInstance().getGameAppkey());
-        ps.println("channelCode渠道名:     " + Yodo1Builder.getInstance().getChannelCode());
+        ps.println("regionCode:           " + Yodo1Builder.getInstance().getRegionCode());
+        ps.println("channelCode:          " + Yodo1Builder.getInstance().getChannelCode());
         ps.println("SDKType类型:           " + YSdkUtils.getSdkType(mContext));
         ps.println("GameType类型:          " + YSdkUtils.getSdkMode());
         ps.println("Channel sdk loaded:");
@@ -118,14 +99,6 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
             ps.println("    " + entry.getKey() + "     v" + entry.getValue().getSDKVersion());
         }
         if (allChannel.isEmpty()) {
-            ps.println("    null");
-        }
-        ps.println("Advert sdk loaded:");
-        Map<String, AdapterAdvertBase> adapters = Yodo1AdvertAdapterFactory.getInstance().getAdapters();
-        for (Map.Entry<String, AdapterAdvertBase> entry : adapters.entrySet()) {
-            ps.println("    " + entry.getKey() + "     v" + entry.getValue().getSdkVersion());
-        }
-        if (adapters.isEmpty()) {
             ps.println("    null");
         }
         ps.println("Analytics sdk loaded:");
@@ -137,7 +110,10 @@ public class FragmentMain extends Fragment implements View.OnClickListener {
             ps.println("    null");
         }
         ps.println("deviceId:" + Yodo1GameUtils.getDeviceId(mContext));
-        ps.println("appSignature:" + YEncodeUtil.MD5Encode(YEncodeUtil.getSHA(YAppUtils.getSignature(mContext)).replace("-", "")));
+        ps.println("UserId:" + Yodo1GameUtils.getUserId());
+        ps.println("defaultTerms:" + Yodo1GameUtils.getTermsLink());
+        ps.println("defaultPrivacy:" + Yodo1GameUtils.getPolicyLink());
+//        ps.println("appSignature:" + YAppUtils.getSignature(mContext));
         ps.println("");
         ps.println("是否登录：" + Yodo1UserCenter.isLogin());
 

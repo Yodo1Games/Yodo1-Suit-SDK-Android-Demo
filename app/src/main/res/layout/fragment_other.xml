@@ -21,52 +21,37 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="请输入激活码..."
-            android:inputType="text" />
+            android:hint="请输入激活码."
+            android:inputType="text"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_activation_code"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="激活码" />
+            android:text="激活码VerifyActiveCode"
+            android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/iap_verofu"
+            android:id="@+id/userprivacy"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="渠道内激活码兑换" />
+            android:text="用户隐私法案Privacy"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/useragreement"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="用户协议更新" />
-
-
-        <Button
-            android:id="@+id/moregame"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="更多游戏" />
+            android:text="用户协议agreementLink"
+            android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/opemcommunity"
+            android:id="@+id/userprivacyterms"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="打开社区" />
-
-
-        <Button
-            android:id="@+id/openbbs"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="打开公告板" />
-
-        <Button
-            android:id="@+id/feedback"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="打开feedback" />
+            android:text="用户隐私协议privacyLink"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_share"
@@ -85,22 +70,15 @@
             android:id="@+id/showsavestore"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="游戏共享存储" />
-
-        <Button
-            android:id="@+id/vivo"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="openReviewPage-vivo"
+            android:text="Suit共享存储internalStore"
             android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/bridge"
+            android:id="@+id/getonlineconfig"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="bridge-methodCall"
+            android:text="获取在线参数getOnlineConfig"
             android:textAllCaps="false" />
-
 
     </LinearLayout>
 </ScrollView>

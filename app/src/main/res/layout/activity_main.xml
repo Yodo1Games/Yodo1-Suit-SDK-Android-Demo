@@ -23,7 +23,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed"
             android:padding="0dp"
-            android:text="Main"
+            android:text="MainInfo"
             android:textAllCaps="false"
             android:textColor="#09093f"
             android:textSize="16sp" />
@@ -35,7 +35,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed"
             android:padding="0dp"
-            android:text="Login"
+            android:text="UserCenter"
             android:textAllCaps="false"
             android:textColor="#09093f"
             android:textSize="16sp" />
@@ -47,31 +47,19 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed"
             android:padding="0dp"
-            android:text="Pay"
+            android:text="Iap"
             android:textAllCaps="false"
             android:textColor="#09093f"
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/button_advert"
+            android:id="@+id/button_analytics"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed"
             android:padding="0dp"
-            android:text="Advert"
-            android:textAllCaps="false"
-            android:textColor="#09093f"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/button_anti"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="sans-serif-condensed"
-            android:padding="0dp"
-            android:text="防沉迷"
+            android:text="Analytics"
             android:textAllCaps="false"
             android:textColor="#09093f"
             android:textSize="16sp" />
@@ -83,7 +71,7 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif-condensed"
             android:padding="0dp"
-            android:text="others"
+            android:text="Other"
             android:textAllCaps="false"
             android:textColor="#09093f"
             android:textSize="16sp" />

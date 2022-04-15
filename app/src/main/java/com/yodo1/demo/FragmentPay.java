@@ -18,7 +18,7 @@ import com.yodo1.android.sdk.helper.ProductData;
 import com.yodo1.android.sdk.helper.Yodo1ProductFactory;
 import com.yodo1.android.sdk.kit.YLog;
 import com.yodo1.android.sdk.kit.YToastUtils;
-import com.yodo1.bridge.api.Yodo1Purchase;
+import com.yodo1.android.sdk.open.Yodo1Purchase;
 
 import java.util.List;
 
@@ -146,8 +146,8 @@ public class FragmentPay extends Fragment implements View.OnClickListener {
         body.findViewById(R.id.btn_payment_restore_purchase).setOnClickListener(this);
         body.findViewById(R.id.btn_payment_sendgoods).setOnClickListener(this);
         body.findViewById(R.id.btn_payment_sendgoodsfail).setOnClickListener(this);
+        body.findViewById(R.id.iap_verofu).setOnClickListener(this);
         content = body.findViewById(R.id.content);
-
 
         List<ProductData> products = Yodo1ProductFactory.getInstance().getProducts();
         StringBuilder sb = new StringBuilder();
@@ -160,7 +160,6 @@ public class FragmentPay extends Fragment implements View.OnClickListener {
             sb.append("\n");
         }
         content.setText(sb.toString());
-
         return body;
     }
 
@@ -168,11 +167,14 @@ public class FragmentPay extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         com.yodo1.android.sdk.open.Yodo1Purchase.init(payListener);
         switch (v.getId()) {
+            case R.id.iap_verofu:
+                Yodo1Purchase.inAppVerify(mContext);
+                break;
             case R.id.btn_payment_purchase:
-                purchase();
+                Yodo1Purchase.pay(mContext, editText.getText().toString());
                 break;
             case R.id.btn_payment_query_products:
-                queryProducts();
+                Yodo1Purchase.queryProducts(mContext);
                 break;
             case R.id.btn_payment_sendgoods:
                 Yodo1Purchase.sendGoods(new String[]{lastSuccessOrderId});
@@ -181,38 +183,17 @@ public class FragmentPay extends Fragment implements View.OnClickListener {
                 Yodo1Purchase.sendGoodsFail(new String[]{lastSuccessOrderId});
                 break;
             case R.id.btn_payment_query_subscription_products:
-                querySubscriptions();
+                Yodo1Purchase.querySubscriptions(mContext);
                 break;
             case R.id.btn_payment_query_miss_orders:
-                queryMissOrder();
+                Yodo1Purchase.queryMissOrder(mContext);
                 break;
             case R.id.btn_payment_restore_purchase:
-                restorePurchase();
+                Yodo1Purchase.restoreProduct(mContext);
                 break;
             default:
                 break;
         }
-    }
-
-
-    private void purchase() {
-        Yodo1Purchase.purchase(editText.getText().toString(), "a", "b");
-    }
-
-    private void queryMissOrder() {
-        Yodo1Purchase.queryMissOrder("a", "b");
-    }
-
-    private void queryProducts() {
-        Yodo1Purchase.requestProductsData("a", "b");
-    }
-
-    private void querySubscriptions() {
-        Yodo1Purchase.querySubscriptions("a", "b");
-    }
-
-    private void restorePurchase() {
-//        Yodo1Purchase.restorePurchases("ab", "cc");
     }
 
 }

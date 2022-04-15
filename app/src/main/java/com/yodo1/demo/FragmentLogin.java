@@ -19,7 +19,6 @@ import com.yodo1.android.sdk.kit.YLog;
 import com.yodo1.android.sdk.kit.YToastUtils;
 import com.yodo1.android.sdk.open.Yodo1Game;
 import com.yodo1.android.sdk.open.Yodo1UserCenter;
-import com.yodo1.bridge.api.Yodo1GameUtils;
 import com.yodo1.sdk.adapter.callback.ChannelSDKCallback;
 import com.yodo1.sdk.adapter.callback.Yodo1ResultCallback;
 import com.yodo1.sdk.adapter.entity.User;
@@ -138,7 +137,12 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
                 Yodo1UserCenter.achievementsOpen(mContext);
                 break;
             case R.id.btn_community:
-                Yodo1GameUtils.openCommunity();
+                Yodo1Game.openCommunity(mContext, new ChannelSDKCallback() {
+                    @Override
+                    public void onResult(int status, int errorCode, String params) {
+
+                    }
+                });
                 break;
             default:
                 break;

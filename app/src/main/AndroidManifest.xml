@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yodo1.demo">
 
-
-    <!--sign_replace_permission-->
     <application
         android:name="com.yodo1.android.sdk.Yodo1Application"
         android:allowBackup="true"
@@ -12,14 +10,14 @@
         android:hardwareAccelerated="true"
         android:icon="@drawable/app_icon"
         android:isGame="true"
-        android:label="appdemodemo"
+        android:label="Yodo1SuitDemo"
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:testOnly="false"
         android:theme="@style/Theme.AppCompat.Light"
-        tools:replace="android:label"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label">
 
         <activity
             android:name="com.yodo1.demo.MainActivity"
@@ -28,20 +26,18 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
-        <!-- yodo1权限控制 -->
+
         <activity
             android:name="com.yodo1.android.sdk.view.SplashActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="appdemo"
             android:exported="true"
+            android:label="appdemo"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -66,7 +62,6 @@
             </intent-filter>
 
         </activity>
-        <!-- yodo1权限控制  end -->
 
 
         <!-- GooglePlay Account -->
