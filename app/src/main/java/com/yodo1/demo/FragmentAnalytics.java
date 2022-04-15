@@ -11,6 +11,7 @@ import android.widget.EditText;
 import androidx.fragment.app.Fragment;
 
 import com.yodo1.android.sdk.open.Yodo1Analytics;
+import com.yodo1.android.sdk.open.Yodo1Game;
 
 
 /**
@@ -71,7 +72,9 @@ public class FragmentAnalytics extends Fragment implements View.OnClickListener 
                 break;
             case R.id.appsflyer:
                 Yodo1Analytics.onCustomEventAppsflyer("test",null);
-
+//                Yodo1Game.getDoNotSell();
+//                Yodo1Game.getUserConsent();
+//                Yodo1Game.getTagForUnderAgeOfConsent();
 //                Yodo1Analytics.setDoNotSell(false);
 //                Yodo1Analytics.setAgeRestrictedUser(false);
 //                Yodo1Analytics.setHasUserConsent(false);

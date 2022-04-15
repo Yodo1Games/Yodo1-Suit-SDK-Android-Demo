@@ -12,11 +12,10 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 30
-        versionName "1.4.30"
-        versionCode 1436
+        versionName "1.5.0"
+        versionCode 10
         multiDexEnabled true
 
-        // 动物园包名
         applicationId 'com.yodo1.suit.demo'
     }
     lintOptions {

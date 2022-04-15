@@ -105,7 +105,7 @@ public class FragmentOther extends Fragment implements View.OnClickListener {
 //                maps.put("hideActionBar", "true");
 //                maps.put("isCloseTouchOutSide","true");
                 maps.put("isDialog", "true");
-                String link = Yodo1GameUtils.getTermsLink();
+                String link = Yodo1GameUtils.getPolicyLink();
                 Yodo1GameUtils.openWebPage(link, new JSONObject(maps).toString());
                 break;
             case R.id.getonlineconfig:
@@ -132,6 +132,7 @@ public class FragmentOther extends Fragment implements View.OnClickListener {
         info.setNeedCompositeImg(true);
         info.setShareUrl("https://docs.yodo1.com/#/");
         info.setIsSharePic(true);
+//        info.setSnsType(snsType);
 
         Yodo1Game.share(mContext, info, new Yodo1ShareCallback() {
             @Override
