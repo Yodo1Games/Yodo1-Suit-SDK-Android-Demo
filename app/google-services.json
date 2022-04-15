@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1002885080198",
+    "firebase_url": "https://jellynauts-9145608.firebaseio.com",
+    "project_id": "jellynauts-9145608",
+    "storage_bucket": "jellynauts-9145608.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002885080198:android:e18426e1b163e1d5",
+        "android_client_info": {
+          "package_name": "com.yodo1.warrior.test1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002885080198-u8616pk1ifrcq8d1bu7c7fgeofqop37l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yodo1.warrior.test1",
+            "certificate_hash": "3f3aa59f6173e489fa503daefb84b28ffdf2aa13"
+          }
+        },
+        {
+          "client_id": "1002885080198-l5rtpiotrln2opg0j3ur8jaki0nsgh2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVkvweAaJXVR62Cx3ED5QBRgjP5Ls1WrE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002885080198-l5rtpiotrln2opg0j3ur8jaki0nsgh2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

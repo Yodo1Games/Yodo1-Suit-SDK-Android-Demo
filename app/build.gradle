@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+//Open 方向测试demo
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+//        versionName "4.8.0"
+//        versionCode 91110
+        versionName "1.4.30"
+        versionCode 1436
+        multiDexEnabled true
+
+        // 动物园包名
+        applicationId 'com.yodo1.rodeo.YODO1' // 普通广告包// 动物园 官网 魅族 努比亚包
+//        applicationId 'com.yodo1.roda' // rod
+//        applicationId 'com.yodo1.rodeo.safari' // 动物园 google
+
+        ndk {
+            // TODO 根据app实际需求指定要ndk需要兼容的架构:   "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+            abiFilters "armeabi-v7a", "armeabi", "arm64-v8a", "x86", "x86_64"
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../Keystores/yodo1.keystore")
+            storePassword "androiddev@yodo1.com"
+            keyAlias "yodo1"
+            keyPassword "androiddev@yodo1.com"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        yodo1new {
+            storeFile file("../Keystores/yodo1new.keystore")
+            storePassword "androiddev@yodo1.com"
+            keyAlias "yodo1"
+            keyPassword "androiddev@yodo1.com"
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable true
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable true
+            jniDebuggable true
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    //---------------------------------- 源码 -----------------------------
+    api rootProject.ext.yodo1_lib.core_sdk
+    api rootProject.ext.yodo1_lib.core_bridge
+    api rootProject.ext.yodo1_lib.mas_core_sdk
+    api rootProject.ext.yodo1_lib.mas_core_bridge
+
+//    api 'com.yodo1.suit.plugin:env:1.3'
+//    api 'com.yodo1.mas:full:4.6.1'
+
+    //支付
+//    api project(':Yodo1Open:yodo1-payment-google')
+//    api 'com.yodo1.suit.pay:google:4.0.0.2'
+    //analytics
+//    api project(':Yodo1Open:yodo1-analytics-appsflyer')
+
+    //渠道广告
+//    api project(':Yodo1Open:yodo1-share-android-system')
+//    api 'com.yodo1.suit.share:system:1.1.0'
+    //analytics
+//    api "com.yodo1.suit.analytics:umeng:9.4.6.0"
+//    api "com.yodo1.suit.analytics:umeng-google:9.4.7.0"
+    api 'com.yodo1.suit.analytics:appsflyer:6.5.3.2'
+//    api 'com.yodo1.suit.analytics:soomla:6.8.2.0'
+//    api 'com.yodo1.suit.analytics:swrve-google:8.0.0.0'
+//    api 'com.yodo1.suit.analytics:firbase:20.0.0'
+}

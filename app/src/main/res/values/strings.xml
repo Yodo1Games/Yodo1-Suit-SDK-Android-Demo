@@ -1,0 +1,55 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="ad_feature" tools:ignore="MissingTranslation">广告功能</string>
+    <string name="show_interstitial_ad" tools:ignore="MissingTranslation">显示插屏广告</string>
+    <string name="show_video_ad" tools:ignore="MissingTranslation">显示视频广告</string>
+    <string name="show_banner_ad" tools:ignore="MissingTranslation">显示Banner广告</string>
+    <string name="hide_banner_ad" tools:ignore="MissingTranslation">隐藏Banner广告</string>
+    <string name="show_native_ad" tools:ignore="MissingTranslation">显示Native广告</string>
+    <string name="hide_native_ad" tools:ignore="MissingTranslation">隐藏Native广告</string>
+    <string name="show_h5_game" tools:ignore="MissingTranslation">显示RewardGame游戏</string>
+
+    <string name="input_interstitial_ad_placement" tools:ignore="MissingTranslation">请输入插屏广告位ID</string>
+    <string name="input_video_ad_placement" tools:ignore="MissingTranslation">请输入视频广告位ID</string>
+    <string name="input_banner_ad_placement" tools:ignore="MissingTranslation">请输入Banner广告位ID</string>
+    <string name="input_native_ad_placement" tools:ignore="MissingTranslation">请输入原生(Native)广告位ID</string>
+
+    <string name="back" tools:ignore="MissingTranslation">返回</string>
+
+    <string name="account_feature" tools:ignore="MissingTranslation">账号功能</string>
+    <string name="account_login" tools:ignore="MissingTranslation">登录</string>
+    <string name="account_submit_user" tools:ignore="MissingTranslation">提交用户信息</string>
+    <string name="account_change" tools:ignore="MissingTranslation">切换账号</string>
+    <string name="account_logout" tools:ignore="MissingTranslation">登出</string>
+
+    <string name="payment_feature" tools:ignore="MissingTranslation">支付功能</string>
+    <string name="payment_purchase" tools:ignore="MissingTranslation">购买商品</string>
+    <string name="payment_query_products" tools:ignore="MissingTranslation">查询所有商品信息</string>
+    <string name="payment_query_miss_orders" tools:ignore="MissingTranslation">查询漏单</string>
+    <string name="payment_query_subscription_products" tools:ignore="MissingTranslation">查询订阅商品信息</string>
+    <string name="payment_restore_purchase" tools:ignore="MissingTranslation">恢复购买</string>
+
+    <string name="input_product_id" tools:ignore="MissingTranslation">请输入商品Id</string>
+
+    <string name="impubic_protect_feature" tools:ignore="MissingTranslation">防沉迷功能</string>
+    <string name="verify_payable_amount" tools:ignore="MissingTranslation">进行可付款金额验证</string>
+    <string name="query_remaining_time" tools:ignore="MissingTranslation">查询剩余游戏时间</string>
+    <string name="query_remaining_payable_amount" tools:ignore="MissingTranslation">查询剩余可支付金额</string>
+    <string name="query_protect_rules" tools:ignore="MissingTranslation">查询防沉迷规则</string>
+
+    <string name="input_protect_test_product_price" tools:ignore="MissingTranslation">测试的支付金额(元)</string>
+
+    <string name="other_feature" tools:ignore="MissingTranslation">其他功能</string>
+    <string name="show_application_information" tools:ignore="MissingTranslation">显示应用信息</string>
+    <string name="quit_application" tools:ignore="MissingTranslation">退出</string>
+    <string name="input_activation_code" tools:ignore="MissingTranslation">请输入激活码</string>
+    <string name="verify_activation_code" tools:ignore="MissingTranslation">验证激活码</string>
+    <string name="share" tools:ignore="MissingTranslation">分享</string>
+    <string name="input_app_key" tools:ignore="MissingTranslation">请输入Appkey</string>
+    <string name="input_region_code" tools:ignore="MissingTranslation">请输入RegionCode</string>
+    <string name="input_online_config_url" tools:ignore="MissingTranslation">请输入在线参数URL，默认为生产环境</string>
+    <string name="input_uc_ap_url" tools:ignore="MissingTranslation">请输入UC_AP URL，默认为生产环境</string>
+    <string name="input_payment_url" tools:ignore="MissingTranslation">请输入Payment URL，默认为生产环境</string>
+    <string name="input_protect_url" tools:ignore="MissingTranslation">请输入防沉迷URL，默认为生产环境</string>
+
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/et_activation_code"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="请输入激活码..."
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_activation_code"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="激活码" />
+
+        <Button
+            android:id="@+id/iap_verofu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="渠道内激活码兑换" />
+
+        <Button
+            android:id="@+id/useragreement"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="用户协议更新" />
+
+
+        <Button
+            android:id="@+id/moregame"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="更多游戏" />
+
+        <Button
+            android:id="@+id/opemcommunity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="打开社区" />
+
+
+        <Button
+            android:id="@+id/openbbs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="打开公告板" />
+
+        <Button
+            android:id="@+id/feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="打开feedback" />
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="分享" />
+
+        <Button
+            android:id="@+id/openWeb"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="openWebPage打开网页"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/showsavestore"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="游戏共享存储" />
+
+        <Button
+            android:id="@+id/vivo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="openReviewPage-vivo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bridge"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="bridge-methodCall"
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+</ScrollView>

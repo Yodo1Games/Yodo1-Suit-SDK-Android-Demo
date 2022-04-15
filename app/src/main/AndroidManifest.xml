@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yodo1.demo">
+
+
+    <!--sign_replace_permission-->
+    <application
+        android:name="com.yodo1.android.sdk.Yodo1Application"
+        android:allowBackup="true"
+        android:enabled="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_icon"
+        android:isGame="true"
+        android:label="appdemodemo"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/Theme.AppCompat.Light"
+        tools:replace="android:label"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="com.yodo1.demo.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="appdemo"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!-- yodo1权限控制 -->
+        <activity
+            android:name="com.yodo1.android.sdk.view.SplashActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="appdemo"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="yodo1.com"
+                    android:scheme="yodo1app" />
+            </intent-filter>
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="rodeo-deeplink.onelink.me"
+                    android:pathPrefix="/Edz8"
+                    android:scheme="https" />
+            </intent-filter>
+
+        </activity>
+        <!-- yodo1权限控制  end -->
+
+
+        <!-- GooglePlay Account -->
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/google_app_id" />
+        <!-- GooglePlay Account -->
+    </application>
+
+</manifest>

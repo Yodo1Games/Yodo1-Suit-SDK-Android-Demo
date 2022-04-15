@@ -1,0 +1,11 @@
+{
+	"client":{
+		"cp_id":"900086000000029925",
+		"product_id":"9105385871708323996",
+		"client_id":"254018942962500672",
+		"client_secret":"A01927BC5975EDDDC5FAB1E7D0121BA472A2698C15D85014726E252B900D80ED",
+		"app_id":"101500661",
+		"package_name":"com.yodo1.steppypants.huawei"
+	},
+	"configuration_version":"1.0"
+}

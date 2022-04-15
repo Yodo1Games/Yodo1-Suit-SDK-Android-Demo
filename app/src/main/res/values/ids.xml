@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Copyright (C) 2013 Google Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<resources>
+    <!--    Peck It Up-GP-->
+    <!--    <string name="app_id">465564421191</string>-->
+    <!--    动物园-->
+    <!--    <string name="google_app_id">104250162327</string>-->
+    <!--    滑雪大冒险10周年-->
+    <!--    <string name="google_app_id">91556516843</string>-->
+    <!--    rod-->
+    <string name="google_app_id">14354806723</string>
+
+    <string name="achievement_becoming_a_hoarder">CgkIwPXFmJQaEAIQAg</string>
+    <string name="achievement_train_tracks">CgkIwPXFmJQaEAIQCw</string>
+    <string name="achievement_tunnel_vision">CgkIwPXFmJQaEAIQDQ</string>
+    <string name="achievement_hobbyist">CgkIwPXFmJQaEAIQDw</string>
+    <string name="achievement_accumulator">CgkIwPXFmJQaEAIQEA</string>
+    <string name="achievement_exhibitionist">CgkIwPXFmJQaEAIQEQ</string>
+    <string name="leaderboard_top_scores">CgkIwPXFmJQaEAIQAA</string>
+    <string name="leaderboard_top_dance">CgkIwPXFmJQaEAIQFg</string>
+    <string name="leaderboard_top_pacman">CgkIwPXFmJQaEAIQFw</string>
+
+</resources>

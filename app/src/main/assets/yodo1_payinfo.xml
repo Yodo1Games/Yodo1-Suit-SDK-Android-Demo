@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product coin="3000" currency="CNY" fidBDOFF="28658" fidCMCC="" fidCMMM="" fidCT="" fidCU=""
+        fidGooglePlay="com.yodo1.stampede.offer1" fidHW="test" fidKPSDK="6000013161"
+        fidLENOVO="133064" fidSYZJ01="com.yodo1.rodeo.refresh" fidSamsung="1"
+        fidXIAOMI="com.yodo1.rodeo.opendoor" fidYYH="" isRepeated="1" priceDisplay="$1.99"
+        productDesc="LuxuryTourSale" productId="iap_few_coins" productName="LuxuryTourSale"
+        productPrice="0.01" />
+
+</products>

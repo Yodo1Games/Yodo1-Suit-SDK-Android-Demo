@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="false"
+                android:text="UserInfo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/loginparam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="loginExtra"
+                    android:minEms="4" />
+
+                <Button
+                    android:id="@+id/btn_account_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Login登录"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_account_devicelogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="设备登录"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btn_account_yodo1login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="yodo1登录"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_account_submit_user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Submit User"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/btn_account_change"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="切换登录" />
+
+            <Button
+                android:id="@+id/btn_account_logout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Logout登出"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_leaderboard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="排行榜"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_ach"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="成就"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_community"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="打开社区"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="exit退出"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
