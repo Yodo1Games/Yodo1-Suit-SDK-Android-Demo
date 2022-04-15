@@ -38,31 +38,16 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Login登录"
+                    android:text="login登录"
                     android:textAllCaps="false" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/btn_account_devicelogin"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="设备登录"
-                android:textAllCaps="false" />
-            <Button
-                android:id="@+id/btn_account_yodo1login"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="yodo1登录"
-                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btn_account_submit_user"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:text="Submit User"
+                android:text="SubmitUser提交用户数据"
                 android:textAllCaps="false" />
 
 
@@ -71,14 +56,15 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:text="切换登录" />
+                android:text="switchlogin切换登录"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btn_account_logout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:text="Logout登出"
+                android:text="logout登出"
                 android:textAllCaps="false" />
 
             <Button
@@ -86,7 +72,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:text="排行榜"
+                android:text="openLeaderBoard排行榜"
                 android:textAllCaps="false" />
 
             <Button
@@ -94,7 +80,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:text="成就"
+                android:text="openAchivement成就"
                 android:textAllCaps="false" />
 
             <Button
@@ -102,7 +88,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:text="打开社区"
+                android:text="openCommunity打开社区"
                 android:textAllCaps="false" />
 
 

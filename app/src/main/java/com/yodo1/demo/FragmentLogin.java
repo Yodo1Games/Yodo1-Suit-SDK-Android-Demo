@@ -90,33 +90,21 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
         body.findViewById(R.id.btn_account_submit_user).setOnClickListener(this);
         body.findViewById(R.id.btn_account_change).setOnClickListener(this);
         body.findViewById(R.id.btn_account_logout).setOnClickListener(this);
-        body.findViewById(R.id.btn_account_devicelogin).setOnClickListener(this);
         body.findViewById(R.id.btn_exit).setOnClickListener(this);
         body.findViewById(R.id.btn_leaderboard).setOnClickListener(this);
         body.findViewById(R.id.btn_ach).setOnClickListener(this);
         body.findViewById(R.id.btn_community).setOnClickListener(this);
-        body.findViewById(R.id.btn_account_yodo1login).setOnClickListener(this);
         tv = body.findViewById(R.id.contentView);
         loginparam = body.findViewById(R.id.loginparam);
         Yodo1UserCenter.setListener(listener);
         return body;
     }
 
-
-//    String subJson = "{\"playerId\":null,\"userId\":\"5edf579237a7eb09e936ad25\",\"nickName\":null,\"level\":0,\"age\":-1,\"gender\":0,\"gameServerId\":null,\"thirdpartyUid\":null,\"thirdpartyToken\":null,\"thirdpartyChannel\":0,\"partyid\":0,\"partyname\":null,\"partyroleid\":0,\"partyrolename\":null,\"power\":0,\"type\":\"enterServer\",\"roleCTime\":0}";
-//        UnityYodo1UserAccount.sumbitUser(subJson);
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_account_login:
                 login();
-                break;
-            case R.id.btn_account_yodo1login:
-                yodo1login();
-                break;
-            case R.id.btn_account_devicelogin:
-                devicelogin();
                 break;
             case R.id.btn_account_submit_user:
                 submitUser();
@@ -210,21 +198,10 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
      * 登录
      */
     private void login() {
-        String s = loginparam.getText().toString();
-        Yodo1UserCenter.login(mContext, LoginType.Channel, s);
+        Yodo1UserCenter.login(mContext);
+//        String s = loginparam.getText().toString();
+//        Yodo1UserCenter.login(mContext, LoginType.Channel, s);
     }
-
-    private void yodo1login() {
-        String s = loginparam.getText().toString();
-        Yodo1UserCenter.login(mContext, LoginType.Yodo1, s);
-    }
-
-
-    private void devicelogin() {
-        String s = loginparam.getText().toString();
-        Yodo1UserCenter.login(mContext, LoginType.Device, s);
-    }
-
 
     /**
      * 提交userInfo

@@ -30,8 +30,9 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="pay支付(iap_few_coin非消耗,iap_few_coins消耗)"
-                android:textAllCaps="false" />
+                android:text="purchase:支付(iap_few_coin非消耗,iap_few_coins消耗)"
+                android:textAllCaps="false"
+                android:textSize="13sp" />
 
             <Button
                 android:id="@+id/btn_payment_query_products"
@@ -77,7 +78,8 @@
                 android:id="@+id/iap_verofu"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="渠道内激活码兑换" />
+                android:text="inAppVerify:渠道内激活码兑换"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btn_payment_restore_purchase"
@@ -96,7 +98,7 @@
                 android:textColor="#000"
                 android:textIsSelectable="true"
                 android:textSize="16sp"
-                tools:text="asdgabadfadsfasdf" />
+                tools:text="" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
