@@ -4,27 +4,9 @@ buildscript {
         maven { url "http://nexus.yodo1.com:8081/repository/maven-public/" }
         mavenCentral()
         google()
-        maven { url 'http://developer.huawei.com/repo/' }
-        // 摸摸鱼新增 start
-        maven { url 'http://maven.byted.org/nexus/content/repositories/ss_app_android' }
-        maven { url "http://maven.byted.org/nexus/content/repositories/ugc_android/" }
-        maven { url 'http://maven.byted.org/repository/android_public/' }
-        // 摸摸鱼新增 end
     }
     dependencies {
-        //gradle 4.1  gradleTools 3.0.1
-        //gradle 5.4.1  gradleTools 3.5.4
-        //gradle 5.6.4  gradleTools 3.6.3
-        //gradle 6.5  gradleTools 4.1.3
-        //gradle 6.8  gradleTools 4.1.3
         classpath 'com.android.tools.build:gradle:4.1.3'
-        //huawei json-for hwChannel
-        classpath 'com.huawei.agconnect:agcp:1.6.0.300'
-        //advert_gp , admob,ironsource
-//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20"
-        //google json-for firebase
-//        classpath 'com.google.gms:google-services:4.3.10'
-//        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
     }
 }
 
@@ -33,49 +15,9 @@ allprojects {
         maven { url "http://nexus.yodo1.com:8081/repository/maven-public/" }
         mavenCentral()
         google()
-        maven { url 'http://developer.huawei.com/repo/' }
-        // 头条
-        maven { url 'https://artifact.bytedance.com/repository/ttgamesdk/' }
-        maven { url 'https://artifact.bytedance.com/repository/pangle' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
-}
-
-
-/**
- * 全局lib依赖配置，1,匹配版本，2，本地，3,确定版本。
- */
-ext {
-    yodo1_lib = [
-
-            /**
-             * core anti.
-             */
-
-            core_sdk         : "com.yodo1.suit.pay:core:1.5.0.0",
-//            core_sdk         : project(':Yodo1Open:core_suit'),
-            core_bridge      : "com.yodo1.suit.pay:core_bridge:1.4.3",
-//            core_bridge          : project(':Yodo1Open:core-sdk-bridge'),
-            mas_core_sdk     : "com.yodo1.advert:core:1.4.0.1",
-//            mas_core_sdk     : project(':Yodo1Open:core_advert'),
-            mas_core_bridge  : "com.yodo1.advert:core_bridge:1.4.0.0",
-//            mas_core_bridge  : project(':Yodo1Open:core-advert-bridge'),
-            anti_core_sdk    : "com.yodo1.anti-addiction:core:3.1.6",
-//            anti_core_sdk    : project(':Yodo1Open:core_anti'),
-            anti_core_bridge : "com.yodo1.anti-addiction:core_bridge:2.0.2",
-//            anti_core_bridge : project(':Yodo1Open:core-anti-bridge'),
-
-            common_collection: "com.yodo1.suit.common:collection:1.4.1.6",
-//            common_collection: project(':Yodo1Open:yodo1-common-collection'),
-            libs_advert      : "com.yodo1.advert:libs-advert:1.4.0",
-//            libs_advert      : project(':Yodo1Open:yodo1-libs-advert'),
-            libs_adapter     : "com.yodo1.suit.pay:lib-adapter:1.4.1.2",
-//            libs_adapter     : project(':Yodo1Open:yodo1-libs-adapter'),
-            libs_analytics   : "com.yodo1.suit.analytics:lib-adapter:1.4.0",
-//            libs_analytics   : project(':Yodo1Open:yodo1-libs-analytics'),
-
-    ]
 }
