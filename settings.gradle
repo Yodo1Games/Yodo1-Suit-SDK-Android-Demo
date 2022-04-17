@@ -1,1 +1,2 @@
 include ':app'
+rootProject.name = 'Suit Demo App - Java'
