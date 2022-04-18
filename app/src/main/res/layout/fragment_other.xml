@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,64 +13,6 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:orientation="vertical">
-
-
-        <EditText
-            android:id="@+id/et_activation_code"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="请输入激活码."
-            android:inputType="text"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/btn_activation_code"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="激活码VerifyActiveCode"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/userprivacy"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="用户隐私法案Privacy"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/useragreement"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="用户协议agreementLink"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/userprivacyterms"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="用户隐私协议privacyLink"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/btn_share"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="分享" />
-
-        <Button
-            android:id="@+id/openWeb"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="openWebPage打开网页"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/showsavestore"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Suit共享存储internalStore"
-            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/getonlineconfig"

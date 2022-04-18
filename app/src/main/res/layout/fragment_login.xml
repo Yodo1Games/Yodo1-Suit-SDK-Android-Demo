@@ -19,44 +19,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:isScrollContainer="false"
-                android:text="UserInfo" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/loginparam"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="loginExtra"
-                    android:minEms="4" />
-
-                <Button
-                    android:id="@+id/btn_account_login"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="login登录"
-                    android:textAllCaps="false" />
-            </LinearLayout>
+                android:minHeight="100sp"
+                android:text="User Info." />
 
             <Button
-                android:id="@+id/btn_account_submit_user"
+                android:id="@+id/btn_account_login"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:text="SubmitUser提交用户数据"
-                android:textAllCaps="false" />
-
-
-            <Button
-                android:id="@+id/btn_account_change"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="switchlogin切换登录"
+                android:text="login登录"
                 android:textAllCaps="false" />
 
             <Button
@@ -66,40 +37,6 @@
                 android:fontFamily="sans-serif-condensed"
                 android:text="logout登出"
                 android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/btn_leaderboard"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="openLeaderBoard排行榜"
-                android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/btn_ach"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="openAchivement成就"
-                android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/btn_community"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="openCommunity打开社区"
-                android:textAllCaps="false" />
-
-
-            <Button
-                android:id="@+id/btn_exit"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="exit退出"
-                android:textAllCaps="false" />
-
 
         </LinearLayout>
     </ScrollView>

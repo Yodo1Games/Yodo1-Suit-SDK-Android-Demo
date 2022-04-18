@@ -11,11 +11,10 @@ import android.widget.EditText;
 import androidx.fragment.app.Fragment;
 
 import com.yodo1.android.sdk.open.Yodo1Analytics;
-import com.yodo1.android.sdk.open.Yodo1Game;
 
 
 /**
- *
+ * Analytics Part.
  */
 public class FragmentAnalytics extends Fragment implements View.OnClickListener {
 
@@ -51,33 +50,17 @@ public class FragmentAnalytics extends Fragment implements View.OnClickListener 
         String ets = editText.getText().toString();
         switch (v.getId()) {
             case R.id.eventname:
-                Yodo1Analytics.onCustomEvent(mContext,ets);
+                Yodo1Analytics.onCustomEvent(mContext, ets);
 //                Yodo1Analytics.onCustomEvent(ets,jsonData);
-//
-//                Yodo1Analytics.onChargeFail(orderId);
-//                Yodo1Analytics.onChargeRequest(order,itemid,currencyAmount,crrencyType,virualCurrencyAmount,paymentType);
-//                Yodo1Analytics.onChargeSuccess(orderId);
-//                Yodo1Analytics.onPurchase(itemId,buyNum,gamecoin);
-//                Yodo1Analytics.onValidateInAppPurchase(publicKey,siganature,purchaseData,price,currency);
-//
+
 //                Yodo1Analytics.onMissionBegion(missionId);
 //                Yodo1Analytics.onMissionCompleted(missionid);
 //                Yodo1Analytics.onMissionFailed(missionid,cause);
 //                Yodo1Analytics.onReward(gamecoin,trigger,reason);
 //                Yodo1Analytics.onUseItem(itemid,useNum,gamecoin);
-//
-//                Yodo1Analytics.login(account);
-//                Yodo1Analytics.logout();
-//                Yodo1Analytics.setAccount(account);
                 break;
             case R.id.appsflyer:
-                Yodo1Analytics.onCustomEventAppsflyer("test",null);
-//                Yodo1Game.getDoNotSell();
-//                Yodo1Game.getUserConsent();
-//                Yodo1Game.getTagForUnderAgeOfConsent();
-//                Yodo1Analytics.setDoNotSell(false);
-//                Yodo1Analytics.setAgeRestrictedUser(false);
-//                Yodo1Analytics.setHasUserConsent(false);
+                Yodo1Analytics.onCustomEventAppsflyer("test", null);
                 break;
             default:
         }

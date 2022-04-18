@@ -34,12 +34,7 @@ dependencies {
     api 'com.yodo1.suit.pay:core:1.5.0.0'
     api 'com.yodo1.suit.pay:core_bridge:1.4.4'
 
-//    api 'com.yodo1.suit.pay:google:4.0.0.2'
+    api 'com.yodo1.suit.pay:google:4.0.0.2'
 
-//    api 'com.yodo1.suit.share:system:1.1.0'
-
-//    api "com.yodo1.suit.analytics:umeng:9.4.6.0"
-//    api "com.yodo1.suit.analytics:umeng-google:9.4.7.0"
-//    api 'com.yodo1.suit.analytics:appsflyer:6.5.3.2'
-//    api 'com.yodo1.suit.analytics:firbase:20.0.0'
+    api 'com.yodo1.suit.analytics:appsflyer:6.5.3.2'
 }
