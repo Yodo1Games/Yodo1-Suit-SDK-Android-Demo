@@ -6,7 +6,11 @@ import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.yodo1.android.sdk.kit.YDeviceUtils;
 import com.yodo1.android.sdk.open.Yodo1Game;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +57,16 @@ public class MainActivity extends Yodo1SupportActivity implements View.OnClickLi
         }
 
         //1,init SDK
-        Yodo1Game.initSDK(this, Config.APP_KEY, Config.REGION_CODE);
+//        Yodo1Game.initSDK(this, Config.APP_KEY, Config.REGION_CODE);
+        JSONObject jso = new JSONObject();
+        try {
+            jso.put("appKey",Config.APP_KEY);
+            jso.put("regionCode",Config.REGION_CODE);
+            jso.put("appsflyerCustomUserID", YDeviceUtils.getDeviceId(this));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        Yodo1Game.initWithConfig(this,jso.toString());
         //2,setDebug if need.
         Yodo1Game.setDebug(true);
     }
