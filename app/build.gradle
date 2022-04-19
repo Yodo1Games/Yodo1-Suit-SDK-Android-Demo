@@ -27,7 +27,7 @@ android {
 
 
 dependencies {
-    api 'com.yodo1.suit.pay:core:1.5.0.0'
+    api 'com.yodo1.suit.pay:core:1.5.0.1'
     api 'com.yodo1.suit.pay:core_bridge:1.4.4'
 
     api 'com.yodo1.suit.pay:google:4.0.0.2'

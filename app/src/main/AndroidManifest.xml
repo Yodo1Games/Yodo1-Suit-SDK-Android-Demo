@@ -39,10 +39,10 @@
         </activity>
 
 
-        <!-- GooglePlay Account -->
+        <!-- GooglePlay Account。your_google_app_id-->
         <meta-data
             android:name="com.google.android.gms.games.APP_ID"
-            android:value="@string/google_app_id" />
+            android:value="your_google_app_id" />
         <!-- GooglePlay Account -->
     </application>
 
