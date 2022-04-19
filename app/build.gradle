@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 30
     buildToolsVersion '30.0.3'
 
     dexOptions {
@@ -10,21 +10,39 @@ android {
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 31
-        versionName "1.5.0"
-        versionCode 10
+        targetSdkVersion 30
+        versionName "2.0.1"
+        versionCode 90000
         multiDexEnabled true
 
-        applicationId 'com.yodo1.suit.demo'
-    }
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
+//        use your owe applicationId
+//        applicationId 'com.yodo1.suit.demo'
+        applicationId 'com.yodo1.rodeo.safari'
     }
 
     compileOptions {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../yodo1.keystore")
+            storePassword ""
+            keyAlias "yodo1"
+            keyPassword ""
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable true
+            jniDebuggable true
+        }
     }
 }
 

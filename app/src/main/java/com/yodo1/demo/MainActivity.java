@@ -43,9 +43,6 @@ public class MainActivity extends Yodo1SupportActivity implements View.OnClickLi
         //analytics
         fragments.add(new FragmentAnalytics());
         mainPagrIds.add(R.id.button_analytics);
-//        //other
-//        fragments.add(new FragmentOther());
-//        mainPagrIds.add(R.id.button_other);
 
         vp = findViewById(R.id.viewpager);
         vp.setOffscreenPageLimit(fragments.size());
@@ -58,14 +55,14 @@ public class MainActivity extends Yodo1SupportActivity implements View.OnClickLi
 
         JSONObject initConfig = new JSONObject();
         try {
+            //value as Your Own Yodo1 GameKey.
             initConfig.put("appKey", "LFo9FuZSz");
+            //value as a unique ID.eg:deviceId.
             initConfig.put("appsflyerCustomUserID", YDeviceUtils.getDeviceId(this));
         } catch (JSONException e) {
             e.printStackTrace();
         }
         Yodo1Game.initWithConfig(this, initConfig.toString());
-
-//        Yodo1Game.setDebug(true);
     }
 
     @Override

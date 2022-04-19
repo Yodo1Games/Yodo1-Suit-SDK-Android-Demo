@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="google_app_id">14354806723</string>
+    <!--    define your owe google_app_id-->
+    <string name="google_app_id">104250162327</string>
 </resources>
