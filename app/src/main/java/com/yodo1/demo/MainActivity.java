@@ -43,9 +43,9 @@ public class MainActivity extends Yodo1SupportActivity implements View.OnClickLi
         //analytics
         fragments.add(new FragmentAnalytics());
         mainPagrIds.add(R.id.button_analytics);
-        //other
-        fragments.add(new FragmentOther());
-        mainPagrIds.add(R.id.button_other);
+//        //other
+//        fragments.add(new FragmentOther());
+//        mainPagrIds.add(R.id.button_other);
 
         vp = findViewById(R.id.viewpager);
         vp.setOffscreenPageLimit(fragments.size());
@@ -65,7 +65,7 @@ public class MainActivity extends Yodo1SupportActivity implements View.OnClickLi
         }
         Yodo1Game.initWithConfig(this, initConfig.toString());
 
-        Yodo1Game.setDebug(true);
+//        Yodo1Game.setDebug(true);
     }
 
     @Override

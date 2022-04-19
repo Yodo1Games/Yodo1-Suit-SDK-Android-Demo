@@ -21,21 +21,21 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="请输入激活码..."
+            android:hint="Please enter an event name ..."
             android:inputType="text" />
 
         <Button
             android:id="@+id/eventname"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="eventName"
+            android:text="Track Event"
             android:textAllCaps="false" />
 
         <Button
             android:id="@+id/appsflyer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="appsflyer上报"
+            android:text="Track Appsflyer Event"
             android:textAllCaps="false" />
 
 
