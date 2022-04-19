@@ -22,7 +22,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="请输入商品Id..."
+                android:hint="Input ProductId..."
                 android:inputType="text" />
 
             <Button
@@ -30,7 +30,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="purchase:支付(iap_few_coin非消耗,iap_few_coins消耗)"
+                android:text="Purchase"
                 android:textAllCaps="false"
                 android:textSize="13sp" />
 
@@ -39,7 +39,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="queryProducts:订单查询"
+                android:text="queryProducts"
                 android:textAllCaps="false" />
 
             <Button
@@ -47,7 +47,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="querySubscriptions:查询订阅"
+                android:text="querySubscriptions"
                 android:textAllCaps="false" />
 
             <Button
@@ -55,7 +55,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="queryMissOrder:查询漏单"
+                android:text="queryMissOrder"
                 android:textAllCaps="false" />
 
             <Button
@@ -63,7 +63,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="sendGoods:发货成功通知"
+                android:text="sendGoods"
                 android:textAllCaps="false" />
 
             <Button
@@ -71,14 +71,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="sendGoodsFail:发货失败通知"
+                android:text="sendGoodsFail"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/iap_verofu"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="inAppVerify:渠道内激活码兑换"
+                android:text="inAppVerify"
                 android:textAllCaps="false" />
 
             <Button
@@ -86,7 +86,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="restoreProduct:恢复购买"
+                android:text="restoreProduct"
                 android:textAllCaps="false" />
 
             <TextView
