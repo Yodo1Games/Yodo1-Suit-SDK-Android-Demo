@@ -27,7 +27,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:text="login登录"
+                android:text="Login"
                 android:textAllCaps="false" />
 
             <Button
@@ -35,7 +35,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:text="logout登出"
+                android:text="Logout"
                 android:textAllCaps="false" />
 
         </LinearLayout>

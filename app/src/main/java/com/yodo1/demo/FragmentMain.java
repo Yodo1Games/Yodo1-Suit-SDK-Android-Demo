@@ -22,7 +22,6 @@ public class FragmentMain extends Fragment {
     private View body;
     private TextView infos;
 
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -38,8 +37,7 @@ public class FragmentMain extends Fragment {
         infos = body.findViewById(R.id.info_content);
         return body;
     }
-
-
+    
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
@@ -64,24 +62,20 @@ public class FragmentMain extends Fragment {
         }
     }
 
-
     private String updateInfos() {
         StringBuilder sb = new StringBuilder();
         StringBuilderPrinter ps = new StringBuilderPrinter(sb);
-        ps.println("App包名:               " + mContext.getPackageName());
-        ps.println("App版本:               " + Yodo1GameUtils.getVersionName());
-        ps.println("SDK版本:               " + Yodo1Game.getSDKVersion());
-        ps.println("appKey:               " + Yodo1Builder.getInstance().getGameAppkey());
-        ps.println("regionCode:           " + Yodo1Builder.getInstance().getRegionCode());
-        ps.println("channelCode:          " + Yodo1Builder.getInstance().getChannelCode());
-        ps.println("SDKType类型:           " + YSdkUtils.getSdkType(mContext));
-        ps.println("GameType类型:          " + YSdkUtils.getSdkMode());
+        ps.println(getString(R.string.app_package_name) + " " + mContext.getPackageName());
+        ps.println(getString(R.string.app_version) + " " + Yodo1GameUtils.getVersionName());
+        ps.println(getString(R.string.app_store_code) + " " + Yodo1Builder.getInstance().getChannelCode());
+        ps.println(getString(R.string.yodo1_app_key) + " " + Yodo1Builder.getInstance().getGameAppkey());
+        ps.println(getString(R.string.sdk_version) + " " + Yodo1Game.getSDKVersion());
+        ps.println(getString(R.string.sdk_type) + " " + YSdkUtils.getSdkType(mContext));
         ps.println("\n");
-        ps.println("deviceId:" + Yodo1GameUtils.getDeviceId(mContext));
-        ps.println("UserId:" + Yodo1GameUtils.getUserId());
-        ps.println("defaultTerms:" + Yodo1GameUtils.getTermsLink());
-        ps.println("defaultPrivacy:" + Yodo1GameUtils.getPolicyLink());
-//        ps.println("appSignature:" + YAppUtils.getSignature(mContext));
+        ps.println("deviceId: " + Yodo1GameUtils.getDeviceId(mContext));
+        ps.println("UserId: " + Yodo1GameUtils.getUserId());
+        ps.println("defaultTerms: " + Yodo1GameUtils.getTermsLink());
+        ps.println("defaultPrivacy: " + Yodo1GameUtils.getPolicyLink());
         return sb.toString();
     }
 }

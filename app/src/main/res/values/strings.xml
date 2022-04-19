@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_package_name">App Package Name:</string>
+    <string name="app_version">App Version:</string>
+    <string name="yodo1_app_key">Yodo1 App Key:</string>
+    <string name="app_store_code">Channel Code:</string>
+    <string name="sdk_version">SDK Version:</string>
+    <string name="sdk_type">SDK Type:</string>
+</resources>

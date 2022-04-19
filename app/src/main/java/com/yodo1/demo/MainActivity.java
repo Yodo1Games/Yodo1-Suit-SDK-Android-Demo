@@ -56,17 +56,14 @@ public class MainActivity extends Yodo1SupportActivity implements View.OnClickLi
             button.setOnClickListener(this);
         }
 
-
-        //prefer init SDK method.
-        JSONObject jso = new JSONObject();
+        JSONObject initConfig = new JSONObject();
         try {
-            jso.put("appKey", "LFo9FuZSz");
-            jso.put("regionCode", "");
-            jso.put("appsflyerCustomUserID", YDeviceUtils.getDeviceId(this));
+            initConfig.put("appKey", "LFo9FuZSz");
+            initConfig.put("appsflyerCustomUserID", YDeviceUtils.getDeviceId(this));
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Yodo1Game.initWithConfig(this, jso.toString());
+        Yodo1Game.initWithConfig(this, initConfig.toString());
 
         Yodo1Game.setDebug(true);
     }

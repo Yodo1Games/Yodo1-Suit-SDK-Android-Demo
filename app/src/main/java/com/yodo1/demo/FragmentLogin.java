@@ -88,15 +88,9 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_account_login:
-                /**
-                 * 登录
-                 */
                 Yodo1UserCenter.login(mContext);
                 break;
             case R.id.btn_account_logout:
-                /**
-                 * 登出
-                 */
                 if (Yodo1UserCenter.isLogin()) {
                     Yodo1UserCenter.logout(mContext);
                 }
