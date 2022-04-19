@@ -9,8 +9,7 @@ import java.util.List;
  * mainPager , adapter
  */
 public class Fragment_Adapter extends FragmentPagerAdapter {
-
-
+    
     private final List<Fragment> fragment;
     private final List<Integer> mainIds;
 

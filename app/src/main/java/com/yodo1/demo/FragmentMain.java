@@ -28,7 +28,6 @@ public class FragmentMain extends Fragment {
         mContext = (Activity) context;
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
@@ -37,7 +36,7 @@ public class FragmentMain extends Fragment {
         infos = body.findViewById(R.id.info_content);
         return body;
     }
-    
+
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);

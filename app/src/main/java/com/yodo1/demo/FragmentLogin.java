@@ -59,7 +59,6 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
         }
     };
 
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -69,7 +68,6 @@ public class FragmentLogin extends Fragment implements View.OnClickListener {
             mContext = (Activity) context;
         }
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

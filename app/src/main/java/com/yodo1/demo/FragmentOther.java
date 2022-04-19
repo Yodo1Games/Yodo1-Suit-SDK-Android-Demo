@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment;
 import com.yodo1.android.sdk.kit.YLog;
 import com.yodo1.android.sdk.onlineconfig.YOnlineConfigUtils;
 
-
 /**
  * other infos.
  *
@@ -19,8 +18,7 @@ import com.yodo1.android.sdk.onlineconfig.YOnlineConfigUtils;
 public class FragmentOther extends Fragment implements View.OnClickListener {
 
     private View body;
-
-
+    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);

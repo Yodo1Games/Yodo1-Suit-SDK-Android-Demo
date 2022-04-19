@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 
 import com.yodo1.android.sdk.open.Yodo1Analytics;
 
-
 /**
  * Analytics Part.
  */
@@ -21,7 +20,6 @@ public class FragmentAnalytics extends Fragment implements View.OnClickListener 
     private View body;
     private EditText editText;
     private Activity mContext;
-
 
     @Override
     public void onAttach(Context context) {
@@ -32,7 +30,6 @@ public class FragmentAnalytics extends Fragment implements View.OnClickListener 
             mContext = (Activity) context;
         }
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -51,13 +48,6 @@ public class FragmentAnalytics extends Fragment implements View.OnClickListener 
         switch (v.getId()) {
             case R.id.eventname:
                 Yodo1Analytics.onCustomEvent(mContext, ets);
-//                Yodo1Analytics.onCustomEvent(ets,jsonData);
-
-//                Yodo1Analytics.onMissionBegion(missionId);
-//                Yodo1Analytics.onMissionCompleted(missionid);
-//                Yodo1Analytics.onMissionFailed(missionid,cause);
-//                Yodo1Analytics.onReward(gamecoin,trigger,reason);
-//                Yodo1Analytics.onUseItem(itemid,useNum,gamecoin);
                 break;
             case R.id.appsflyer:
                 Yodo1Analytics.onCustomEventAppsflyer("test", null);
