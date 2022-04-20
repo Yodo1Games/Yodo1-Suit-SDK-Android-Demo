@@ -38,7 +38,7 @@ google_publish_key=your_GooglePlay_PublishKey
 ### 4. Change `your_google_app_id` in AndroidManifest.xml
 
 ``` xml
-<!-- GooglePlay Account。Replace your_google_app_id of your app-->
+<!-- Replace your_google_app_id with your Play Games Services' app ID-->
         <meta-data
             android:name="com.google.android.gms.games.APP_ID"
             android:value="your_google_app_id" />
