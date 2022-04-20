@@ -9,7 +9,7 @@ To get started with the demo app, follow the instructions below:
 
 ### 1. Change `applicationId,versionName,versionCode` to your game's `build.gradle`
 
-### 2. Change the Your AppKey value in `MainActivity.java` file with the AppId
+### 2. Change the `Your AppKey` value in `MainActivity.java` file with the AppId
 
 ``` java
 JSONObject initConfig = new JSONObject();
@@ -23,7 +23,7 @@ JSONObject initConfig = new JSONObject();
         }
         Yodo1Game.initWithConfig(this, initConfig.toString());
 ```
-### 3. Change `yodo1_games_config.properties` to Your_AF_DevKey, Your_TD_AppId, your_GooglePlay_PublishKey
+### 3. Change Your_AF_DevKey, Your_TD_AppId, and your_GooglePlay_PublishKey in `yodo1_games_config.properties` file
 
 ``` properties
 # Thinking Data
@@ -44,7 +44,7 @@ google_publish_key=your_GooglePlay_PublishKey
             android:value="your_google_app_id" />
 ```
 
-### 5,add your SKU data in `assets/yodo1_payinfo.xml`
+### 5. Add your SKU items in `assets/yodo1_payinfo.xml` file
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
