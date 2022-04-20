@@ -9,18 +9,6 @@
         currency="CNY"
         isRepeated="1"
         coin="3000"
-        fidGooglePlay="com.yodo1.stampede.offer1"
-        fidBDOFF=""
-        fidCMCC=""
-        fidCMMM=""
-        fidCT=""
-        fidCU=""
-        fidHW=""
-        fidKPSDK=""
-        fidLENOVO=""
-        fidSYZJ01=""
-        fidSamsung="1"
-        fidXIAOMI=""
-        fidYYH=""/>
+        fidGooglePlay="com.yodo1.stampede.offer1"/>
 
 </products>
