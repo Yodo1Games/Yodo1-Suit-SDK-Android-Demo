@@ -2,14 +2,14 @@
 
 ## Overview
 
-### Please check out our [documentation](https://github.com/Yodo1Games/Suit-Document/blob/master/README.md) to get started on integrating.
+### Check the [documentation](https://github.com/Yodo1Games/Suit-Document/blob/master/README.md) to get started on integration.
 
 ## Demo App
 To get started with the demo app, follow the instructions below:
 
 ### 1. Change `applicationId,versionName,versionCode` to your game's `build.gradle`
 
-### 2. Change the `Your AppKey` value in `MainActivity.java` file with the AppId
+### 2. Change `Your AppKey` value in `MainActivity.java` file with the AppId
 
 ``` java
 JSONObject initConfig = new JSONObject();
