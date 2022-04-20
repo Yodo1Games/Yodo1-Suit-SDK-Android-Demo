@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yodo1.demo">
+
+    <application
+        android:name="com.yodo1.android.sdk.Yodo1Application"
+        android:allowBackup="true"
+        android:enabled="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_icon"
+        android:isGame="true"
+        android:label="Yodo1SuitDemo"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/Theme.AppCompat.Light"
+        android:usesCleartextTraffic="true">
+
+        <!--        define your Home/Main Activity.-->
+        <activity
+            android:name="com.yodo1.demo.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="appdemo"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!--        use com.yodo1.android.sdk.view.SplashActivity as LAUNCHER.-->
+        <activity
+            android:name="com.yodo1.android.sdk.view.SplashActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- GooglePlay Account。your_google_app_id-->
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="your_google_app_id" />
+        <!-- GooglePlay Account -->
+    </application>
+
+</manifest>

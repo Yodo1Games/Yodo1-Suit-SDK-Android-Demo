@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionName "2.0.1"
+        versionCode 90000
+        multiDexEnabled true
+
+//        use your owe applicationId
+        applicationId 'com.yodo1.suit.demo'
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+
+dependencies {
+    api 'com.yodo1.suit.pay:core:1.5.0.1'
+    api 'com.yodo1.suit.pay:core_bridge:1.4.4'
+
+    api 'com.yodo1.suit.pay:google:4.0.0.2'
+
+    api 'com.yodo1.suit.analytics:appsflyer:6.5.3.3'
+}

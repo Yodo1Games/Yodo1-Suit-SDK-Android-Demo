@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product
+        productId="iap_few_coins"
+        productName="LuxuryTourSale"
+        productDesc="LuxuryTourSale"
+        productPrice="0.01"
+        priceDisplay="$1.99"
+        currency="CNY"
+        isRepeated="1"
+        coin="3000"
+        fidGooglePlay="com.yodo1.stampede.offer1"/>
+
+</products>
