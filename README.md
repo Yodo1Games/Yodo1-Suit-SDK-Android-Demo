@@ -35,6 +35,10 @@ appsflyer_dev_key=Your_AF_DevKey
 google_publish_key=your_GooglePlay_PublishKey
 ```
 
+* google_publish_key - You can find out it like this
+![image](https://user-images.githubusercontent.com/12006868/164260817-d1ff9441-8854-470e-bc0b-f9de1e220bd5.png)
+
+
 ### 4. Change `your_google_app_id` in AndroidManifest.xml
 
 ``` xml
