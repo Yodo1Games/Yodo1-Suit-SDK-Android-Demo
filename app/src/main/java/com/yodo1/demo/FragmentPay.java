@@ -20,6 +20,7 @@ import com.yodo1.android.sdk.kit.YLog;
 import com.yodo1.android.sdk.kit.YToastUtils;
 import com.yodo1.android.sdk.open.Yodo1Purchase;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -45,7 +46,6 @@ public class FragmentPay extends Fragment implements View.OnClickListener {
             if (code == Yodo1PurchaseListener.ERROR_CODE_SUCCESS) {
                 Toast.makeText(mContext, "Pay Success,send Goods", Toast.LENGTH_SHORT).show();
                 lastSuccessOrderId = orderId;
-                Yodo1Purchase.sendGoods(new String[]{orderId});
             } else if (code == Yodo1PurchaseListener.ERROR_CODE_FAIELD) {
                 Toast.makeText(mContext, "Pay Failed", Toast.LENGTH_LONG).show();
             } else if (code == Yodo1PurchaseListener.ERROR_CODE_MISS_ORDER) {
@@ -54,6 +54,13 @@ public class FragmentPay extends Fragment implements View.OnClickListener {
                 Toast.makeText(mContext, "Pay Canceled", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(mContext, "Code:" + code + " orderId:" + orderId, Toast.LENGTH_LONG).show();
+            }
+
+            //send order status after purchase callback.
+            if (code == Yodo1PurchaseListener.ERROR_CODE_SUCCESS) {
+                Yodo1Purchase.sendGoods(new String[]{orderId});
+            } else {
+                Yodo1Purchase.sendGoodsFail(new String[]{orderId});
             }
         }
 
@@ -77,11 +84,16 @@ public class FragmentPay extends Fragment implements View.OnClickListener {
             String msg = "queryMissOrder, code = " + code + ", products.size = " + size;
             YLog.e(TAG + msg);
             Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
+            List<String> orders = new ArrayList<String>();
             if (products != null) {
                 for (int i = 0; i < products.size(); i++) {
                     ProductData product = products.get(i);
+                    orders.add(product.getOrderId());
                     YLog.e(TAG + "queryMissOrder, index: " + i + ", product info: [" + product.toString() + "]");
                 }
+
+                //send order status after missOrder callback.
+                Yodo1Purchase.sendGoods((String[]) orders.toArray());
             }
         }
 
