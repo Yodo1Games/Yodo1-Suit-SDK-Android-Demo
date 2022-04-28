@@ -93,7 +93,9 @@ public class FragmentPay extends Fragment implements View.OnClickListener {
                 }
 
                 //send order status after missOrder callback.
-                Yodo1Purchase.sendGoods((String[]) orders.toArray());
+                if (orders.size() > 0) {
+                    Yodo1Purchase.sendGoods((String[]) orders.toArray());
+                }
             }
         }
 
